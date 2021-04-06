@@ -7,25 +7,23 @@ function App() {
 	const [currentIndex, setCurrentIndex] = useState(null);
 
 	const inputRef = useRef(null);
-
 	const addItem = function (e) {
-		e.preventDefault();
+		e.preventDefault(); // prevents page refresh when button clicked (becasue it is in a form)
 		if (currentIndex !== null) {
-			const arr = [...items];
-			arr[currentIndex] = item;
-			setItems(arr);
+			const arr = [...items]; // create new array to re-render the App
+			arr[currentIndex] = item; // modifies the element with the selected index
+			setItems(arr); // update list of items with edit and re-render
 		} else {
-			setItems([...items, item]);
+			setItems([...items, item]); // update list of items without edit and re-render
 		}
-		setCurrentIndex(null);
-		setItem("");
-		inputRef.current.focus();
+		setCurrentIndex(null); // resets index after ed it
+		setItem(""); // erases item from input field
+		inputRef.current.focus(); // keeps focus on input field
 	};
 
 	const edit = function (index) {
-		setItem(items[index]);
-		console.log(items[index]);
-		setCurrentIndex(index);
+		setItem(items[index]); // selects the current item based on the selected index (click)
+		setCurrentIndex(index); // udates the curent index function of the selected element from ul list
 	};
 
 	return (
@@ -33,8 +31,7 @@ function App() {
 			<form>
 				<label>To do list</label>
 				<input ref={inputRef} type="text" value={item} onChange={(e) => setItem(e.target.value)}></input>
-				{/* <input ref={inputRef} value={selectedText} type="text"></input> */}
-				<button onClick={(e) => addItem(e)}>Add me</button>
+				<button onClick={(e) => addItem(e)}>Add me</button> {/* (e) is needed for .preventDefault() */}
 				<ul>
 					{items.map((element, index) => (
 						<li onClick={() => edit(index)} key={index}>
