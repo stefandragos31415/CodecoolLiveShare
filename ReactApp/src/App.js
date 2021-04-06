@@ -6,14 +6,16 @@ function App() {
 	const [items, setItems] = useState([]);
 	const [currentIndex, setCurrentIndex] = useState(null);
 
-	const inputRef = useRef(null);
+	const inputRef = useRef(null); // needed to keep focus on the input field
 	const addItem = function (e) {
 		e.preventDefault(); // prevents page refresh when button clicked (becasue it is in a form)
 		if (currentIndex !== null) {
+			// true when we edit an existing element from the items list
 			const arr = [...items]; // create new array to re-render the App
 			arr[currentIndex] = item; // modifies the element with the selected index
 			setItems(arr); // update list of items with edit and re-render
 		} else {
+			// true when adding a new element to the items list
 			setItems([...items, item]); // update list of items without edit and re-render
 		}
 		setCurrentIndex(null); // resets index after ed it
