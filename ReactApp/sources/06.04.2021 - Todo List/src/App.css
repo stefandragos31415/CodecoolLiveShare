@@ -65,8 +65,7 @@ input[type="submit"]:hover {
 	width: 75%;
 	margin-top: 6px;
 }
-a
-  
+
 /* Clear floats after the columns */
 .row:after {
 	content: "";
@@ -130,4 +129,18 @@ button:hover {
 
 .success {
 	color: green;
+}
+
+label,
+input {
+	width: 100%;
+}
+
+.to-do-item {
+	cursor: pointer;
+}
+
+#root {
+	width: 1000px;
+	margin: 0 auto;
 }
