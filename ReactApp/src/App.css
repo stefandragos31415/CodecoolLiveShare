@@ -1,146 +1,121 @@
-.search-params {
-	width: 750px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
 
-form {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 50px;
-	margin-bottom: 50px;
-}
 
-* {
-	box-sizing: border-box;
-}
-
-input[type="text"],
-select,
-textarea {
-	width: 100%;
-	padding: 12px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	resize: vertical;
-}
-
-label {
-	padding: 12px 12px 12px 0;
-	display: inline-block;
-	font-weight: bold;
-}
-
-input[type="submit"] {
-	background-color: #4caf50;
-	color: white;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	float: right;
-}
-
-input[type="submit"]:hover {
-	background-color: #45a049;
+body {
+    background: #1D2029;
+    font-family: "Helvetica";
 }
 
 .container {
-	border-radius: 5px;
-	background-color: #f2f2f2;
-	padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.col-25 {
-	float: left;
-	width: 25%;
-	margin-top: 6px;
+.platform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    margin: 10px;
+    height: 220px;
+    background: #252B43;
+    color: whitesmoke;
 }
 
-.col-75 {
-	float: left;
-	width: 75%;
-	margin-top: 6px;
+.update-followers-button {
+    background: none;
+    border: 2px solid whitesmoke;
+    border-radius: 100px;
+    height: 35px;
+    width: 35px;
+    font-size: large;
+    font-weight: bolder;
+    color: whitesmoke;
+    margin: 0 10px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
+.trend-ascend {
+    color: #429189
+}
+
+.trend-descend {
+    color: #82455C
+}
+
+.header {
+    color: whitesmoke;
+    font-size: 33px;
+    font-weight: bolder;
+}
+
+.sub-header {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #505573;
+}
+
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 img {
-	width: 100%;
-	margin-top: 50px;
+    width: 30px;
+    margin: 0 10px;
 }
 
-button {
-	background-color: #4caf50; /* Green */
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	background-color: #008cba;
-	cursor: pointer;
-	/* margin-top: 50px; */
-	width: 200px;
+.icon {
+    margin: 30px 0;
+    display: flex;
+    color: #505573;
 }
 
-button:hover {
-	opacity: 0.8;
+.icon p {
+    margin: 0;
+    line-height: 30px;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-	.col-25,
-	.col-75,
-	input[type="submit"] {
-		width: 100%;
-		margin-top: 0;
-	}
+.followers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 33px;
+    color: whitesmoke;
+    font-weight: bolder;
 }
 
-.pet-rating {
-	margin-top: 50px;
+.subscribers {
+    color: #505573;
+    font-weight: bolder;
+    margin-top: 10px;
+    font-size: larger;
 }
 
-.pet-rating-button {
-	margin-bottom: 50px;
+.difference {
+    margin: 15px 0px;
+    font-weight: bolder;
 }
 
-.adopt-button {
-	margin-bottom: 50px;
+.add-card {
+    margin: 10px 0;
 }
 
-.message {
-	margin-bottom: 50px;
+.add-card button {
+    background: #505573;
+    border: none;
+    font-size: large;
+    width: 100%;
 }
 
-.error {
-	color: red;
-}
-
-.success {
-	color: green;
-}
-
-label,
 input {
-	width: 100%;
+    display: block;
+    font-size: large;
+    background: #252B43;
+    color: whitesmoke;
+    border: none;
+    margin: 5px;
 }
 
-.to-do-item {
-	cursor: pointer;
-}
-
-#root {
-	width: 1000px;
-	margin: 0 auto;
-}
+textarea, select, input, button { outline: none; }
