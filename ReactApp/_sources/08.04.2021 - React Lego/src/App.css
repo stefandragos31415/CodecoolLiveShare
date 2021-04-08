@@ -1,0 +1,121 @@
+
+
+body {
+    background: #1D2029;
+    font-family: "Helvetica";
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.platform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    margin: 10px;
+    height: 220px;
+    background: #252B43;
+    color: whitesmoke;
+}
+
+.update-followers-button {
+    background: none;
+    border: 2px solid whitesmoke;
+    border-radius: 100px;
+    height: 35px;
+    width: 35px;
+    font-size: large;
+    font-weight: bolder;
+    color: whitesmoke;
+    margin: 0 10px;
+}
+
+.trend-ascend {
+    color: #429189
+}
+
+.trend-descend {
+    color: #82455C
+}
+
+.header {
+    color: whitesmoke;
+    font-size: 33px;
+    font-weight: bolder;
+}
+
+.sub-header {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #505573;
+}
+
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+.icon {
+    margin: 30px 0;
+    display: flex;
+    color: #505573;
+}
+
+.icon p {
+    margin: 0;
+    line-height: 30px;
+}
+
+.followers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 33px;
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
+.subscribers {
+    color: #505573;
+    font-weight: bolder;
+    margin-top: 10px;
+    font-size: larger;
+}
+
+.difference {
+    margin: 15px 0px;
+    font-weight: bolder;
+}
+
+.add-card {
+    margin: 10px 0;
+}
+
+.add-card button {
+    background: #505573;
+    border: none;
+    font-size: large;
+    width: 100%;
+}
+
+input {
+    display: block;
+    font-size: large;
+    background: #252B43;
+    color: whitesmoke;
+    border: none;
+    margin: 5px;
+}
+
+textarea, select, input, button { outline: none; }
