@@ -16,6 +16,7 @@ function App() {
 
     function plusButton(user) {
         user.followers++
+        setUserList([...userList])
     }
 
     return (
