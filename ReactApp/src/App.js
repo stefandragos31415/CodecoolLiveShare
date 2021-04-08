@@ -1,38 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import data from "./sampleData";
 import AddNewCard from "./components/addNewCard";
+import Header from './components/Header';
+import Card from './components/Card';
 
 function App() {
-    console.log(data)
+
+    const [userList, setUserList] = useState(data.users)
+
+    function minusButton(user) {
+        user.followers--
+        setUserList([...userList])
+    }
+
+    function plusButton(user) {
+        user.followers++
+    }
+
     return (
         <div className="root">
-            <div className="header">
-                Social Media Dashboard
-                <div className="sub-header">
-                    Total followers: 33
-                </div>
-            </div>
-
-            <section className="platform">
-                <div className="icon" >
-                    <img src={data.icon}></img>
-                    <p>{data.users[0].name}</p>
-                </div>
-                <div className="followers">
-                    <button className="update-followers-button">-</button>
-                    {data.users[0].followers}
-                    <button className="update-followers-button">+</button>
-                </div>
-                <div className="subscribers">
-                    F O L O W E R S
-                </div>
-                <div>
-                    <span className='trend-ascend'>▼</span>
-                    <span className='trend-descend'>▼</span>
-                    {data.users[0].difference}
-                </div>
-            </section>
+            <Header users={data.users} />
+            {
+                userList.map((card) =>
+                    <Card key={card.name}
+                        user={card}
+                        icon={data.icon}
+                        plusButton={plusButton}
+                        minusButton={minusButton}
+                    />
+                )
+            }
 
             <AddNewCard></AddNewCard>
         </div>

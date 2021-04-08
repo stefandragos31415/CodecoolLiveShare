@@ -5,7 +5,16 @@ const data = {
     { name: "barbie", followers: 11012, difference: 1099 },
     { name: "ken", followers: 8239, difference: -144 }
   ],
-  icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/1024px-Facebook_icon_2013.svg.png"
+  icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/1024px-Facebook_icon_2013.svg.png",
+
+  // optional
+  getTotalFollowers: function () {
+    let total = 0;
+    this.users.forEach((user) => {
+      total += user.followers;
+    })
+    return total;
+  }
 };
 
 export default data
