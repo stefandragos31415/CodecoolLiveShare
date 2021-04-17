@@ -1,0 +1,15 @@
+img {
+    height: 35rem;
+    object-fit:cover;
+}
+
+.Promotion-Carousel {
+    margin-top: 1.5em;
+    width: 50%;
+}
+
+.Promotion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

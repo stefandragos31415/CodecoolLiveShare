@@ -1,0 +1,29 @@
+.container {
+    width: 80vw;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+}
+
+.item {
+  width: 750px;
+}
+
+ol {
+    padding: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    background: whitesmoke;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+    display: flex;
+    justify-content: start;
+}
+
+.navbar a {
+    margin: 0 10px;
+}
