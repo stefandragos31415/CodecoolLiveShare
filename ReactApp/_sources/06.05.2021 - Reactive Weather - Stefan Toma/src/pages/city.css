@@ -1,0 +1,14 @@
+#root,
+html,
+body,
+.container-fluid{
+    width: 100vw;
+    height: 80vh;
+}
+
+.card {
+    border-radius: 10px;
+    background: #f7f7f7;
+    box-shadow:  26px 26px 52px #dedede,
+    -26px -26px 52px #ffffff;
+}
